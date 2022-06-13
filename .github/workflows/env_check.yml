@@ -1,0 +1,21 @@
+name: env_check
+on: [pull_request, push] 
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node 17.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17.x
+
+      - name: Install Dependencies (prod)
+        run: npm install
+        env:
+          CI: true
+          FATES_TOKEN: ${{ secrets.FATES_TOMKEN }}
+

@@ -1,0 +1,51 @@
+{
+    "name": "@infinity/rowlet",
+    "description": "Official API for Infinity Bot List",
+    "author": "Infinity Development <https://infinitydev.team>",
+    "version": "4.2.0",
+    "main": "handlers/client/discord.js",
+    "scripts": {
+        "dev": "nodemon handlers/client/discord.js",
+        "start": "node handlers/client/discord.js"
+    },
+    "dependencies": {
+        "ajv": "^8.11.0",
+        "@discordjs/rest": "^0.3.0",
+        "chalk": "^4.1.2",
+        "discord.js": "^13.6.0",
+        "discord-api-types": "^0.27.3",
+        "fastify": "^3.28.0",
+        "@fastify/cors": "^7.0.0",
+        "fastify-autoload": "^3.11.0",
+        "fastify-rate-limit": "^5.8.0",
+        "fs": "^0.0.1-security",
+        "glob": "^7.1.7",
+        "ioredis": "^5.0.3",
+        "module-alias": "^2.2.2",
+        "mongoose": "^6.0.12",
+        "moment": "^2.29.2",
+        "moment-duration-format": "^2.3.2",
+        "node-superfetch": "^0.2.3",
+        "parse-ms": "^3.0.0",
+        "redis": "^4.0.6",
+        "systeminformation": "^5.8.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15",
+        "ibl-autopost": "latest",
+        "ibl-emitter": "latest",
+        "ibl-esl-config": "latest",
+        "infinity-bots": "latest",
+        "infinity-logger": "latest",
+        "prettier": "^2.0.5"
+    },
+    "_moduleAliases": {
+        "@Root": ".",
+        "@Func": "./server/functions",
+        "@Models": "./database",
+        "@Handlers": "./handlers",
+        "@Server": "./server",
+        "@Configs": "./configs",
+        "@Routes": "./server/routes"
+    }
+}
