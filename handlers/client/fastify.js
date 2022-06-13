@@ -34,7 +34,7 @@ module.exports = async (client) => {
   fastify.register(require('fastify-autoload'), {
     dir: path.join(__dirname, '../../server/routes'),
   });
-  
+
   fastify.register(require('@fastify/cors'), {
     origin: '*',
     allowedHeaders: ['authorization', 'content-type'],
@@ -42,8 +42,8 @@ module.exports = async (client) => {
     credentials: true,
     optionsSuccessStatus: 200,
     preflight: false,
-    strictPreflight: false
-  })
+    strictPreflight: false,
+  });
 
   fastify.addHook('preHandler', (req, res, done) => {
     req.client = client;
